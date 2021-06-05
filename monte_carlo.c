@@ -40,8 +40,8 @@ int main(void) {
 }
 float mc_pi(int n){
 	long int i=0;
-	float x = frandom();
-	float y = frandom();
+	float x = 2*frandom()-1;
+	float y = 2*frandom()-1;
 	long int circle_ct=0,square_ct=0;
 	while(i<n){
 		float d=((x*x)+(y*y));
