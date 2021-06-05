@@ -40,20 +40,20 @@ int main(void) {
 }
 float mc_pi(int n){
 	long int i=0;
-	float x = 2*frandom()-1;
-	float y = 2*frandom()-1;
-	long int circle_ct=0,square_ct=0;
+	long int circle_ct=0,total_ct=0;
 	while(i<n){
+		float x = 2*frandom()-1;
+		float y = 2*frandom()-1;
+		total_ct++;
+	
 		float d=((x*x)+(y*y));
 		if(d<=1){
 			  circle_ct+=1;
 			}
-		if(d>1){
-			  square_ct+=1;
-			}
+		
 		i++;
         }
-	float pi=((4*circle_ct)/(square_ct));
+	float pi=((4*circle_ct)/(total_ct));
 	return (pi);
 	}
 
